@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox layout</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- Create a Flex Container -->
+    <h1>Create a Flex Container</h1>
+
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <p>
+      A flexible layout must have a parent element with the
+      <em>display</em> property set to <em>flex</em>.
+    </p>
+    <p>
+      Direct child element(S) of the flexible container automatically becomes
+      flexible items
+    </p>
+
+    <!-- The flex direction property -->
+    <h1>The flex direction property</h1>
+    <p>
+      The "flex-direction: column;" stack the flex items vertically (from top to
+      bottom)
+    </p>
+    <div class="flex-container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <p>
+      The "flex-direction: column-reverse;" stack the flex items vertically
+      (from bottom to top)
+    </p>
+    <div class="flex-container3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <p>
+      The "flex-direction: row;" stack the flex items horizontally (from left to
+      right)
+    </p>
+    <div class="flex-container4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <p>
+      The "flex-direction: row-reverse;" stack the flex items vertically (from
+      right to left)
+    </p>
+    <div class="flex-container5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+
+    <!-- CSS Flex Items -->
+    <h1>CSS Flex Items</h1>
+
+    <h1>Child Elements(items)</h1>
+    <div class="flex-container6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <p>All direct children of a flexible container becomes flexible items</p>
+
+    <h1>The order property</h1>
+    <p>Use the order property to sort the flex items as you like:</p>
+    <div class="flex-container7">
+      <div style="order: 3">1</div>
+      <div style="order: 2">2</div>
+      <div style="order: 4">3</div>
+      <div style="order: 1">4</div>
+    </div>
+
+    <h1>The flex-grow property</h1>
+    <p>
+      Make the third flex items grow eight times faster than the order flex
+      items:
+    </p>
+    <div class="flex-container8">
+      <div style="flex-grow: 1">1</div>
+      <div style="flex-grow: 1">2</div>
+      <div style="flex-grow: 8">3</div>
+    </div>
+
+    <h1>The flex-shrink property</h1>
+    <p>
+      Do not less the third flex item shrink as much as the other flex items:
+    </p>
+    <div class="flex-container9">
+      <div>1</div>
+      <div>2</div>
+      <div style="flex-shrink: 0">3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div>
+
+    <h1>The flex-basis property</h1>
+    <p>Set the initial length of the third flex item to 200 pixels:</p>
+    <div class="flex-container10">
+      <div>1</div>
+      <div>2</div>
+      <div style="flex-basis: 200px">3</div>
+      <div>4</div>
+    </div>
+
+    <h1>The align-self property</h1>
+    <p>
+      The "align-self:center;" aligns the selected flex item in the middle of
+      the container:
+    </p>
+    <div class="flex-container11">
+      <div>1</div>
+      <div>2</div>
+      <div style="align-self: center">3</div>
+      <div>4</div>
+    </div>
+    <p>
+      The align-self property overrides the align items property of the
+      container
+    </p>
+
+    <!-- CSS Flex Responsive -->
+    <h1>Responsive Flexbox</h1>
+    <p>
+      The "flex-direction: row;" stacks the flex items horizontally (from left
+      to right).
+    </p>
+    <p>
+      The "flex-direction: column;" stacks the flex items vertically (from top
+      to bottom).
+    </p>
+    <p>
+      <b
+        >Resize the browser window to see that the direction changes when the
+        screen size is 800px wide or smaller</b
+      >
+    </p>
+    <div class="flex-container12">
+      <div class="flex-item-left">1</div>
+      <div class="flex-item-right">2</div>
+    </div>
+
+    <p>
+      In this example, we change the percentage of flex to create different
+      layouts for different screen sizes.
+    </p>
+    <p>
+      <b
+        >Resize the browser window to see that the screen size is 800 px wide or
+        smaller</b
+      >
+    </p>
+    <div class="flex-container13">
+      <div class="flex-item-left1">1</div>
+      <div class="flex-item-right2">2</div>
+    </div>
+
+    <!-- Responsive Image Gallery -->
+    <!-- Header -->
+    <div class="header">
+      <h1>Responsive Image Gallery</h1>
+      <p>Resize the browser window to see the responsive effect</p>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="row">
+      <div class="column">
+        <img src="img/anthony-lim-yl2tffLuSGE-unsplash.jpg" style="width: 100%;" />
+        <img src="img/ben-den-engelsen-KXNvs9puOTA-unsplash.jpg" style="width: 100%;" />
+        <img src="img/chris-yang-tIoJTDZg53M-unsplash.jpg" style="width: 100%;" />
+        <img src="img/clay-leconey-Uzv0J17Esf8-unsplash.jpg" style="width: 100%;" />
+        <img src="img/jan-kopriva-kXdduu9ZvSg-unsplash.jpg" style="width: 100%;" />
+        <img src="img/lo-bast-oLPLCXJfI3o-unsplash.jpg" style="width: 100%;" />
+      </div>
+      <div class="column">
+        <img src="img/neom--RlktmDy3Ec-unsplash.jpg" style="width: 100%;" />
+        <img src="img/neom-t3dlLOhdEzs-unsplash.jpg" style="width: 100%;" />
+        <img src="img/neom-xXqWVUvf_Gw-unsplash.jpg" style="width: 100%;" />
+        <img src="img/shubham-dhage-hYGyOBXFZ9o-unsplash.jpg" style="width: 100%;" />
+        <img src="img/the-cleveland-museum-of-art-aUCfZrhCd00-unsplash.jpg" style="width: 100%;" />
+        <img src="img/vladislav-nahorny-xPLPJrjX2dQ-unsplash.jpg" style="width: 100%;" />
+        <img src="img/oc-gonzalez-xg8z_KhSorQ-unsplash.jpg" style="width: 100%;" />
+        <img src="img/neom-0SUho_B0nus-unsplash.jpg" style="width: 100%;" />
+      </div>
+      <div class="column">
+        <img src="img/anthony-lim-yl2tffLuSGE-unsplash.jpg" style="width: 100%;" />
+        <img src="img/ben-den-engelsen-KXNvs9puOTA-unsplash.jpg" style="width: 100%;" />
+        <img src="img/chris-yang-tIoJTDZg53M-unsplash.jpg" style="width: 100%;" />
+        <img src="img/clay-leconey-Uzv0J17Esf8-unsplash.jpg" style="width: 100%;" />
+        <img src="img/jan-kopriva-kXdduu9ZvSg-unsplash.jpg" style="width: 100%;" />
+        <img src="img/lo-bast-oLPLCXJfI3o-unsplash.jpg" style="width: 100%;" />
+      </div>
+      <div class="column">
+        <img src="img/neom--RlktmDy3Ec-unsplash.jpg" style="width: 100%;" />
+        <img src="img/neom-t3dlLOhdEzs-unsplash.jpg" style="width: 100%;" />
+        <img src="img/neom-xXqWVUvf_Gw-unsplash.jpg" style="width: 100%;" />
+        <img src="img/shubham-dhage-hYGyOBXFZ9o-unsplash.jpg" style="width: 100%;" />
+        <img src="img/the-cleveland-museum-of-art-aUCfZrhCd00-unsplash.jpg" style="width: 100%;" />
+        <img src="img/vladislav-nahorny-xPLPJrjX2dQ-unsplash.jpg" style="width: 100%;" />
+        <img src="img/oc-gonzalez-xg8z_KhSorQ-unsplash.jpg" style="width: 100%;" />
+        <img src="img/neom-0SUho_B0nus-unsplash.jpg" style="width: 100%;" />
+      </div>
+    </div>
+  </body>
+</html>
